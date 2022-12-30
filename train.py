@@ -547,9 +547,9 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
 
 def parse_opt(known=False):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--weights', type=str, default=ROOT / 'yolov3.pt', help='initial weights path')
-    parser.add_argument('--cfg', type=str, default='models/v7_cfg/baseline/yolov4-csp.yaml', help='')
-    parser.add_argument('--data', type=str, default=ROOT / 'mydata/Driver.2/data.yaml', help='dataset.yaml path')
+    parser.add_argument('--weights', type=str, default=ROOT / 'yolov7-tiny.pt', help='initial weights path')
+    parser.add_argument('--cfg', type=str, default='models/v7_cfg/deploy/yolov7-gam3.yaml', help='CEAM-YOLOv7 model')
+    parser.add_argument('--data', type=str, default=ROOT / 'mydata/Driver.3/data.yaml', help='dataset.yaml path')
     parser.add_argument('--hyp', type=str, default=ROOT / 'data/hyps/hyp.scratch-v7.yaml', help='hyperparameters path')
     parser.add_argument('--epochs', type=int, default=100)
     parser.add_argument('--batch-size', type=int, default=8, help='total batch size for all GPUs,  -1 for autobatch')

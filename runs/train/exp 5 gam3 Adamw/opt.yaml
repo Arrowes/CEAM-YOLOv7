@@ -1,0 +1,80 @@
+Fusing layers... 
+yolov7-gam3 summary: 235 layers, 5134737 parameters, 0 gradients, 12.7 GFLOPs
+val: Scanning 'G:\YOLO\yolov5_research-yolov7\mydata\Driver.2\valid\labels.cache' images and labels... 250 found, 0 missing, 63 empty, 0 corrupt: 100%|██████████| 250/250 [00:00<?, ?it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 16/16 [00:03<00:00,  5.33it/s]
+                 all        250        191      0.589      0.675      0.697      0.318
+              Danger        250         34      0.658      0.882      0.888      0.564
+               Drink        250         60      0.575        0.9      0.848      0.306
+               Phone        250         60      0.373       0.35      0.276     0.0594
+                Safe        250         37       0.75      0.567      0.777      0.341
+Speed: 0.2ms pre-process, 4.1ms inference, 3.4ms NMS per image at shape (16, 3, 640, 640)	129.870
+Results saved to runs\val\exp 5 gam3 Adamw
+
+Fusing layers... 
+yolov7-gam3 summary: 235 layers, 5134737 parameters, 0 gradients, 12.7 GFLOPs
+val: Scanning 'G:\YOLO\yolov5_research-yolov7\mydata\Driver.3\valid\labels' images and labels...250 found, 0 missing, 63 empty, 0 corrupt: 100%|██████████| 250/250 [00:02<00:00, 109.22it/s]
+val: WARNING: Cache directory G:\YOLO\yolov5_research-yolov7\mydata\Driver.3\valid is not writeable: [WinError 183] 当文件已存在时，无法创建该文件。: 'G:\\YOLO\\yolov5_research-yolov7\\mydata\\Driver.3\\valid\\labels.cache.npy' -> 'G:\\YOLO\\yolov5_research-yolov7\\mydata\\Driver.3\\valid\\labels.cache'
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 16/16 [00:03<00:00,  5.27it/s]
+                 all        250        191      0.736      0.388      0.497      0.227
+              Danger        250         34      0.908      0.872      0.868      0.472
+               Drink        250         60      0.579      0.413      0.508      0.195
+               Phone        250         60      0.455      0.265      0.218     0.0402
+                Safe        250         37          1          0      0.393      0.201
+Speed: 0.2ms pre-process, 5.4ms inference, 2.0ms NMS per image at shape (16, 3, 640, 640)
+
+200 epochs completed in 1.364 hours.
+Optimizer stripped from runs\train\exp\weights\last.pt, 10.6MB
+Optimizer stripped from runs\train\exp\weights\best.pt, 10.6MB
+
+Validating runs\train\exp\weights\best.pt...
+Fusing layers... 
+yolov7-gam3 summary: 235 layers, 5134737 parameters, 0 gradients, 12.7 GFLOPs
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 8/8 [00:02<00:00,  3.06it/s]
+                 all        250        191      0.588      0.675      0.699      0.318
+              Danger        250         34      0.658      0.882      0.888      0.564
+               Drink        250         60      0.575        0.9      0.849      0.306
+               Phone        250         60      0.371       0.35      0.277     0.0596
+                Safe        250         37       0.75      0.567      0.781      0.342
+Results saved to runs\train\exp
+
+weights: yolov7-tiny.pt
+cfg: models/v7_cfg/deploy/yolov7-gam3.yaml
+data: mydata\Driver.2\data.yaml
+hyp: data\hyps\hyp.scratch-v7.yaml
+epochs: 200
+batch_size: 16
+imgsz: 640
+rect: false
+resume: false
+nosave: false
+noval: false
+noautoanchor: false
+noplots: false
+evolve: null
+bucket: ''
+cache: null
+image_weights: false
+device: ''
+multi_scale: false
+single_cls: false
+optimizer: AdamW
+sync_bn: false
+workers: 8
+project: runs\train
+name: exp
+exist_ok: false
+quad: false
+cos_lr: false
+label_smoothing: 0.0
+patience: 100
+freeze:
+- 0
+save_period: -1
+local_rank: -1
+entity: null
+upload_dataset: false
+bbox_interval: -1
+artifact_alias: latest
+swin_float: false
+aux_ota_loss: false
+save_dir: runs\train\exp

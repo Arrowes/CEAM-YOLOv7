@@ -1,0 +1,70 @@
+yolov7-gam3 summary: 235 layers, 5134737 parameters, 0 gradients, 12.7 GFLOPs
+val: Scanning 'G:\YOLO\yolov5_research-yolov7\mydata\Driver.2\valid\labels.cache' images and labels... 250 found, 0 missing, 63 empty, 0 corrupt: 100%|██████████| 250/250 [00:00<?, ?it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 16/16 [00:02<00:00,  5.45it/s]
+                 all        250        191      0.663      0.662      0.688      0.354
+              Danger        250         34          1      0.774      0.887      0.591
+               Drink        250         60      0.838       0.85      0.865      0.343
+               Phone        250         60      0.482      0.483      0.434      0.157
+                Safe        250         37      0.331      0.541      0.566      0.325
+Speed: 0.2ms pre-process, 4.0ms inference, 3.3ms NMS per image at shape (16, 3, 640, 640)	133.333
+Results saved to runs\val\exp 5 gam3 Mish
+
+200 epochs completed in 1.342 hours.
+Optimizer stripped from runs\train\exp2\weights\last.pt, 10.6MB
+Optimizer stripped from runs\train\exp2\weights\best.pt, 10.6MB
+
+Validating runs\train\exp2\weights\best.pt...
+Fusing layers... 
+yolov7-gam3 summary: 235 layers, 5134737 parameters, 0 gradients, 12.7 GFLOPs
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 8/8 [00:02<00:00,  3.13it/s]
+                 all        250        191      0.662      0.662      0.688      0.354
+              Danger        250         34          1      0.774      0.887      0.585
+               Drink        250         60      0.838       0.85      0.865      0.343
+               Phone        250         60      0.481      0.483      0.434      0.157
+                Safe        250         37       0.33      0.541      0.566       0.33
+Results saved to runs\train\exp2
+
+进程已结束,退出代码0
+
+
+weights: yolov7-tiny.pt
+cfg: models/v7_cfg/deploy/yolov7-gam3.yaml
+data: mydata\Driver.2\data.yaml
+hyp: data\hyps\hyp.scratch-v7.yaml
+epochs: 200
+batch_size: 16
+imgsz: 640
+rect: false
+resume: false
+nosave: false
+noval: false
+noautoanchor: false
+noplots: false
+evolve: null
+bucket: ''
+cache: null
+image_weights: false
+device: ''
+multi_scale: false
+single_cls: false
+optimizer: SGD
+sync_bn: false
+workers: 8
+project: runs\train
+name: exp
+exist_ok: false
+quad: false
+cos_lr: false
+label_smoothing: 0.0
+patience: 100
+freeze:
+- 0
+save_period: -1
+local_rank: -1
+entity: null
+upload_dataset: false
+bbox_interval: -1
+artifact_alias: latest
+swin_float: false
+aux_ota_loss: false
+save_dir: runs\train\exp2
