@@ -1,6 +1,7 @@
 ## [CEAM-YOLOv7:Improved YOLOv7 Based on Channel Expansion and Attention Mechanism for Driver Distraction Behavior Detection](https://ieeexplore.ieee.org/document/9980374/metrics)
 ## 项目简介
 驾驶员的不规范行为易引发交通事故，因此，为规范驾驶员行为，减少交通事故的发生，对驾驶员行为进行检测至关重要。本文提出了一种改进的目标检测模型CEAM-YOLOv7，该模型利用GAM注意力模块和通道扩展数据增强算法来减少特征图生成过程中的信息丢失，提高检测精度。将YOLOv7架构的Backbone和Head部分加入GAM注意力模块，减少信息损失的同时放大全局维度交互特征，同时，使用剪枝算法，在保证实时检测的前提下，提高了YOLOv7网络的检测性能。此外，使用更适合于实际驾驶场景的红外图像数据集进行训练，结合inversion和CLAHE图像增强方法，提出了一种基于通道扩展的红外图像数据增强算法，改善针对红外图像的目标检测效果。经大量实验结果表明，与YOLOv7相比，CEAM-YOLOv7的map提升了20.26%，FPS达到了156，本文方法的有效性和优越性得到了验证。 
+(mydata文件夹中红外数据集不公开，请谅解)
 ## 技术点
 ### 通道扩展算法
 ![图 1](https://raw.sevencdn.com/Arrowes/Arrowes-Blogbackup/main/images/Project1.png)  
