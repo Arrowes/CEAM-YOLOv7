@@ -13,6 +13,7 @@ CLAHE:由于红外图像的对比度比较低，其灰度分布通常都是分�
 ```
 ### GAM注意力机制
 ![图 2](https://raw.sevencdn.com/Arrowes/Arrowes-Blogbackup/main/images/Project2.png) 
+
 GAM是一种能够捕捉所有三个维度的显著特征的注意机制，采用了CBAM中的顺序通道-空间注意机制，对通道-空间注意力子模块进行了重新设计，通道注意力子模块使用3D置换来跨三维保持信息，使用用两层感知器MLP（Multi-Layer Perceptron）放大跨维信道-空间相关性；空间注意力子模块采用了两个卷积层进行空间信息融合。由此，通过减少信息丢失和放大全局交互特征来提高深度神经网络的性能，提高了对于红外图像目标的识别能力，在识别速度和精度之间进行了有效的权衡，也与数据增强处理中的通道扩展算法相对应。
 ### 网络架构
 ![图 3](https://raw.sevencdn.com/Arrowes/Arrowes-Blogbackup/main/images/Project3.png)  
